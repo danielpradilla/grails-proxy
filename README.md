@@ -2,7 +2,8 @@
 
 Small grails proxy app for bypassing the same origin policy 
 
-** Note **
+**Note**
+
 Requires the wslite grails plugin http://grails.org/plugin/wslite
 
 ## How to use
@@ -13,30 +14,32 @@ General ideas:
 * You will call the proxy url, pass along the path to the desired resource and the rest of the parameters
 
 
-1. Create the controller
+### 1. Create the controller
 Check DemoController for a working sample
 
 Change 'demo.service.url' accordingly ie: 'service.name.url'
 
 
-2. Configure the url
+### 2. Configure the url
 
-Create a configuration file at {USER_HOME}/.grails/grails-proxy-config.groovy
+Create a configuration file at `{USER_HOME}/.grails/grails-proxy-config.groovy`
 
 replace demo.service.url with your own. Example:
+``` groovy
 service.name.url='http://otherserver/service'
+```
 
 Reload the configuration using
-http://server:port/grails-proxy/configReload
+`http://server:port/grails-proxy/configReload`
 
 You can add as many services as you want.
 
 You must restart the application when you change the service url... or you can reload the configuration dynamically (see below)
 
-3. Deploy the app
+### 3. Deploy the app
 
-4. Query your service
-http://server:port/grails-proxy/service
+### 4. Query your service
+`http://server:port/grails-proxy/service`
 
 where 'service' is the name of the controller you chose
 
@@ -48,9 +51,10 @@ http://server:port/grails-proxy/configReload
 
 
 
-# Demo config file
-Save this at {USER_HOME}/.grails/grails-proxy-config.groovy
-```
+### Demo config file
+Save this at `{USER_HOME}/.grails/grails-proxy-config.groovy`
+
+``` groovy
 demo.service.url='http://echo.jsontest.com/key/value/one/two'
 ```
 
