@@ -1,6 +1,6 @@
 # grails-proxy
 
-Small proxy app for bypassing the same origin policy 
+Small grails proxy app for bypassing the same origin policy 
 
 ** Note **
 Requires the wslite grails plugin http://grails.org/plugin/wslite
@@ -47,5 +47,11 @@ If you want to change your service url without restarting the app, change the gr
 http://server:port/grails-proxy/configReload
 
 
+
+# Demo config file
+Save this at {USER_HOME}/.grails/grails-proxy-config.groovy
+```
+demo.service.url='http://echo.jsontest.com/key/value/one/two'
+```
 
 
